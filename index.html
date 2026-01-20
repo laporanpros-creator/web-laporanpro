@@ -205,7 +205,7 @@
             <p class="text-slate-500 text-sm mb-8">Mitra terpercaya UMKM Indonesia dalam digitalisasi keuangan.</p>
             
             <div class="flex justify-center gap-6 mb-8">
-                <a href="https://wa.me/6281578397441" class="text-slate-400 hover:text-green-500 transition"><span class="sr-only">WhatsApp</span> WA Admin</a>
+                <a href="https://wa.me/6281578397441?text=Halo%20Admin%20LaporanPro%20👋%20Saya%20tertarik%20konsultasi%20jasa%20laporan%20keuangan." class="text-slate-400 hover:text-green-500 transition"><span class="sr-only">WhatsApp</span> Chat Admin (WA)</a>
             </div>
 
             <p class="text-slate-400 text-xs">&copy; 2024 Laporan Pro. All rights reserved.</p>
@@ -223,12 +223,15 @@
             
             if(!nama || !wa) { alert("Mohon isi Nama dan Nomor WhatsApp"); return; }
 
-            const text = `Halo Admin Laporan Pro, saya ingin konsultasi.%0A%0A` +
-                         `*Nama:* ${nama}%0A` +
-                         `*Bisnis:* ${bisnis}%0A` +
-                         `*No WA:* ${wa}%0A` +
-                         `*Minat Paket:* ${kebutuhan}%0A` +
-                         `*Kendala:* ${pesan}`;
+            // FORMAT PESAN BARU YANG LEBIH CANTIK
+            const text = `Halo Admin Laporan Pro! 👋%0A` +
+                         `Saya tertarik untuk merapikan keuangan bisnis saya. Berikut data diri saya:%0A%0A` +
+                         `👤 *Nama:* ${nama}%0A` +
+                         `🏢 *Bisnis:* ${bisnis}%0A` +
+                         `📱 *No WA:* ${wa}%0A` +
+                         `💼 *Minat Paket:* ${kebutuhan}%0A` +
+                         `📝 *Kendala/Catatan:* ${pesan}%0A%0A` +
+                         `Mohon info lebih lanjut untuk jadwal konsultasinya ya. Terima kasih! 🙏`;
             
             const adminPhone = "6281578397441"; 
             window.open(`https://wa.me/${adminPhone}?text=${text}`, '_blank');
